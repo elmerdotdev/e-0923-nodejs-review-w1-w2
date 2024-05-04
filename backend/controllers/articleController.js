@@ -17,13 +17,7 @@ function getArticleById(articleId) {
 
 // Add article
 function addArticle(postName, postContent, published = true) {
-  const newArticle = {
-    id: articles.length + 1,
-    postName,
-    postContent,
-    postDate: 2024,
-    published
-  }
+  const newArticle = new Article(articles.length + 1, postName, postContent, 2024, published)
   articles.push(newArticle)
   return newArticle
 }
